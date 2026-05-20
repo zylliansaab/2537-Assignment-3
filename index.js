@@ -121,6 +121,7 @@ function reset() {
     secondsLeft = undefined;
     gameStarted = false;
     powUpInit = false;
+    $("#matches").text("Correct matches: 0");
 
     gameTimerSeconds = diffTimer;
     $("#timer").text(gameTimerSeconds);
@@ -168,9 +169,12 @@ function matchCards() {
     $(`#${secondCard.id}`).parent().off("click")
     $(`#${firstCard.id}`).parent().addClass("match")
     $(`#${secondCard.id}`).parent().addClass("match")
-    firstCard = undefined;
-    secondCard = undefined;
     score++;
+    $("#matches").text("Correct matches: " + score);
+    setTimeout(() => {
+      firstCard = undefined;
+      secondCard = undefined;
+    }, 3000);
 
     checkScore(score);
 
