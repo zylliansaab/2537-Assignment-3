@@ -5,6 +5,7 @@ let firstCard = undefined
 let secondCard = undefined
 let firstCardID = undefined
 let secondCardID = undefined
+let matching = false
 
 // Scores
 let score = 0;
@@ -151,7 +152,7 @@ function setup() {
           matchCards();
         }
       }
-    } else {
+    } else if (matching) {
       return;
     }
   });
@@ -169,14 +170,17 @@ function matchCards() {
     $(`#${secondCard.id}`).parent().off("click")
     $(`#${firstCard.id}`).parent().addClass("match")
     $(`#${secondCard.id}`).parent().addClass("match")
+    firstCard = undefined;
+    secondCard = undefined;
     score++;
     $("#matches").text("Correct matches: " + score);
-    setTimeout(() => {
-      firstCard = undefined;
-      secondCard = undefined;
-    }, 3000);
 
     checkScore(score);
+
+    matching = true;
+    setTimeout(() => {
+      matching = false;
+    }, 3000);
 
   } else {
     console.log("no match")
