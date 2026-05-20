@@ -121,6 +121,8 @@ function reset() {
     secondsLeft = undefined;
     gameStarted = false;
     powUpInit = false;
+    firstCard = undefined;
+    secondCard = undefined;
     $("#matches").text("Correct matches: 0");
 
     gameTimerSeconds = diffTimer;
