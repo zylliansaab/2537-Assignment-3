@@ -16,12 +16,37 @@
 
 <body>
   <header class="text-center mt-5 ">
-    <h1>Pokemon Card Matching Game</h1>
+    <h1><b>PokeMatch</b></h1>
     <h3>A fun game of luck and memory</h3>
-    <div id="result"></div>
-    <button type="button" class="btn btn-outline-primary mb-3 ">Start!</button>
+    <div id="powup"></div>
+    <p id="time-preview">Based on difficulty, your time limit is: 80</p>
+    <div class="row justify-content-center">
+      <div class="col-auto mb-3">
+        <button type="button" id="easy" class="btn btn-outline-primary diff">Easy</button>
+      </div>
+      <div class="col-auto mb-3">
+        <button type="button" id="normal" class="btn btn-outline-warning diff">Normal</button>
+      </div>
+      <div class="col-auto mb-3">
+        <button type="button" id="hard" class="btn btn-outline-danger diff">Hard</button>
+      </div>
+      <div class="col-auto mb-3">
+        <button type="button" id="impossible" class="btn btn-outline-dark diff">Impossible</button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto mb-3">
+        <button type="button" id="start" class="btn btn-primary">Start</button>
+      </div>
+      <div class="col-auto mb-3">
+        <button type="button" id="reset" class="btn btn-danger">Reset</button>
+      </div>
+    </div>
+    <div>
+      <h2 id="result"></h1>
+      <h1 id="timer"></h1>
+    </div>
   </header>
-  <div></div>
   <div id="game_grid">
     <div class="card">  
       <img id="img1" class="front_face" src="001.png" alt="">
@@ -47,7 +72,58 @@
       <img id="img6" class="front_face" src="003.png" alt="">
       <img class="back_face" src="back.webp" alt="">
     </div>
+    <div class="card">
+      <img id="img7" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img8" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img9" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img10" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img11" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img12" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img13" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img14" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img15" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img16" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
   </div>
+  <div class="row justify-content-center mt-3">
+      <div class="col-auto mb-3">
+        <button type="button" id="lightmode" class="bgmode btn">Light</button>
+      </div>
+      <div class="col-auto mb-3">
+        <button type="button" id="darkmode" class="bgmode btn btn-secondary">Dark</button>
+      </div>
+      <div class="col-auto mb-3">
+        <button type="button" id="contrastmode" class="bgmode btn btn-dark">Contrast</button>
+      </div>
+    </div>
 </body>
 
 </html>
